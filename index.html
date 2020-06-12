@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Самый лучший сайт в мире</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="utf-8">
+
+
+	<style>
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #fff;
+      
+    }
+
+    
+    .slider {
+    	border: 5px solid black;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+    .slider__wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    
+    .slider__items  {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+    
+    
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+   
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+
+    .slider__control_prev {
+      left: 0;
+    }
+
+    .slider__control_next {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_prev::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_next::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    
+    .slider__indicators {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 15%;
+      margin-left: 15%;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .slider__indicators li {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 4px;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.5);
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+
+    .slider__indicators li.active {
+      background-color: #fff;
+    }
+
+    
+    .img-fluid {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+	<div id="shapka">
+		<img src="img/logo.png" height="70px">
+		<div id="menu">
+			<ul style="margin-bottom: 0px;">
+			<li>
+				НОВОСТИ
+			</li>
+			<li>
+				ОБРАТНАЯ СВЯЗЬ
+			</li>
+			<li>
+				ЛИЧНЫЙ КАБИНЕТ
+			</li>
+			<li>
+				АВТОРИЗАЦИЯ
+			</li>
+		</ul>
+		</div>
+	</div>
+<div class="slider">
+    <div class="slider__wrapper">
+      <div class="slider__items">
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/1.jpg" width="100%" height="100%" >
+          	
+          	</div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/2.jpg" width="100%" height="100%" ></div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/3.jpg" width="100%" height="100%" ></div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/4.jpg" width="100%" height="100%" ></div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/5.jpeg" width="100%" height="100%" ></div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/6.jpg" width="100%" height="100%" ></div>
+        </div>
+        <div class="slider__item">
+          <div style="height: 450px; background: black;"><img src="img/7.jpg" width="100%" height="100%" ></div>
+        </div>
+      </div>
+    </div>
+    <a class="slider__control slider__control_prev" href="#" role="button"></a>
+    <a class="slider__control slider__control_next" href="#" role="button"></a>
+  </div>
+
+  <script>
+    'use strict';
+    var slideShow = (function () {
+      return function (selector, config) {
+        var
+          _slider = document.querySelector(selector), 
+          _sliderContainer = _slider.querySelector('.slider__items'), 
+          _sliderItems = _slider.querySelectorAll('.slider__item'), 
+          _sliderControls = _slider.querySelectorAll('.slider__control'), 
+          _currentPosition = 0, 
+          _transformValue = 0, 
+          _transformStep = 100, 
+          _itemsArray = [], 
+          _timerId,
+          _indicatorItems,
+          _indicatorIndex = 0,
+          _indicatorIndexMax = _sliderItems.length - 1,
+          _stepTouch = 50,
+          _config = {
+            isAutoplay: false, 
+            directionAutoplay: 'next', 
+            delayAutoplay: 5000, 
+            isPauseOnHover: true 
+          };
+
+       
+        for (var key in config) {
+          if (key in _config) {
+            _config[key] = config[key];
+          }
+        }
+
+        for (var i = 0, length = _sliderItems.length; i < length; i++) {
+          _itemsArray.push({ item: _sliderItems[i], position: i, transform: 0 });
+        }
+
+       
+        var position = {
+          getItemIndex: function (mode) {
+            var index = 0;
+            for (var i = 0, length = _itemsArray.length; i < length; i++) {
+              if ((_itemsArray[i].position < _itemsArray[index].position && mode === 'min') || (_itemsArray[i].position > _itemsArray[index].position && mode === 'max')) {
+                index = i;
+              }
+            }
+            return index;
+          },
+          getItemPosition: function (mode) {
+            return _itemsArray[position.getItemIndex(mode)].position;
+          }
+        };
+
+        
+        var _move = function (direction) {
+          var nextItem, currentIndicator = _indicatorIndex;;
+          if (direction === 'next') {
+            _currentPosition++;
+            if (_currentPosition > position.getItemPosition('max')) {
+              nextItem = position.getItemIndex('min');
+              _itemsArray[nextItem].position = position.getItemPosition('max') + 1;
+              _itemsArray[nextItem].transform += _itemsArray.length * 100;
+              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
+            }
+            _transformValue -= _transformStep;
+            _indicatorIndex = _indicatorIndex + 1;
+            if (_indicatorIndex > _indicatorIndexMax) {
+              _indicatorIndex = 0;
+            }
+          } else {
+            _currentPosition--;
+            if (_currentPosition < position.getItemPosition('min')) {
+              nextItem = position.getItemIndex('max');
+              _itemsArray[nextItem].position = position.getItemPosition('min') - 1;
+              _itemsArray[nextItem].transform -= _itemsArray.length * 100;
+              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
+            }
+            _transformValue += _transformStep;
+            _indicatorIndex = _indicatorIndex - 1;
+            if (_indicatorIndex < 0) {
+              _indicatorIndex = _indicatorIndexMax;
+            }
+          }
+          _sliderContainer.style.transform = 'translateX(' + _transformValue + '%)';
+          _indicatorItems[currentIndicator].classList.remove('active');
+          _indicatorItems[_indicatorIndex].classList.add('active');
+        };
+
+        
+        var _moveTo = function (index) {
+          var i = 0, direction = (index > _indicatorIndex) ? 'next' : 'prev';
+          while (index !== _indicatorIndex && i <= _indicatorIndexMax) {
+            _move(direction);
+            i++;
+          }
+        };
+
+        
+        var _startAutoplay = function () {
+          if (!_config.isAutoplay) {
+            return;
+          }
+          _stopAutoplay();
+          _timerId = setInterval(function () {
+            _move(_config.directionAutoplay);
+          }, _config.delayAutoplay);
+        };
+
+        
+        var _stopAutoplay = function () {
+          clearInterval(_timerId);
+        };
+
+        
+        var _addIndicators = function () {
+          var indicatorsContainer = document.createElement('ol');
+          indicatorsContainer.classList.add('slider__indicators');
+          for (var i = 0, length = _sliderItems.length; i < length; i++) {
+            var sliderIndicatorsItem = document.createElement('li');
+            if (i === 0) {
+              sliderIndicatorsItem.classList.add('active');
+            }
+            sliderIndicatorsItem.setAttribute("data-slide-to", i);
+            indicatorsContainer.appendChild(sliderIndicatorsItem);
+          }
+          _slider.appendChild(indicatorsContainer);
+          _indicatorItems = _slider.querySelectorAll('.slider__indicators > li')
+        };
+
+        var _isTouchDevice = function () {
+          return !!('ontouchstart' in window || navigator.maxTouchPoints);
+        };
+
+        var _setUpListeners = function () {
+          var _startX = 0;
+          if (_isTouchDevice()) {
+            _slider.addEventListener('touchstart', function (e) {
+              _startX = e.changedTouches[0].clientX;
+              _startAutoplay();
+            });
+            _slider.addEventListener('touchend', function (e) {
+              var
+                _endX = e.changedTouches[0].clientX,
+                _deltaX = _endX - _startX;
+              if (_deltaX > _stepTouch) {
+                _move('prev');
+              } else if (_deltaX < -_stepTouch) {
+                _move('next');
+              }
+              _startAutoplay();
+            });
+          } else {
+            for (var i = 0, length = _sliderControls.length; i < length; i++) {
+              _sliderControls[i].classList.add('slider__control_show');
+            }
+          }
+          _slider.addEventListener('click', function (e) {
+            if (e.target.classList.contains('slider__control')) {
+              e.preventDefault();
+              _move(e.target.classList.contains('slider__control_next') ? 'next' : 'prev');
+              _startAutoplay();
+            } else if (e.target.getAttribute('data-slide-to')) {
+              e.preventDefault();
+              _moveTo(parseInt(e.target.getAttribute('data-slide-to')));
+              _startAutoplay();
+            }
+          });
+          document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === "hidden") {
+              _stopAutoplay();
+            } else {
+              _startAutoplay();
+            }
+          }, false);
+          if (_config.isPauseOnHover && _config.isAutoplay) {
+            _slider.addEventListener('mouseenter', function () {
+              _stopAutoplay();
+            });
+            _slider.addEventListener('mouseleave', function () {
+              _startAutoplay();
+            });
+          }
+        };
+
+        
+        _addIndicators();
+        
+        _setUpListeners();
+       
+        _startAutoplay();
+
+        return {
+          
+          next: function () {
+            _move('next');
+          },
+                    
+          left: function () {
+            _move('prev');
+          },
+          
+          stop: function () {
+            _config.isAutoplay = false;
+            _stopAutoplay();
+          },
+          
+          cycle: function () {
+            _config.isAutoplay = true;
+            _startAutoplay();
+          }
+        }
+      }
+    }());
+
+    slideShow('.slider', {
+      isAutoplay: true
+    });
+  </script>
+  <div id="yslygi">
+  	<div style="height: 100px;background-color: black;width: 100%;">
+  		<div id="text-yslygi"> Наш магизн предоставляет такие услуги,как:</div>
+  	</div>
+  </div>
+  <div id="content1">
+  	<div id="content11">
+<h1>Базовое техническое<br> обслуживание</h1><br>
+<h2>Бесплатный выезд.<br>
+Подготовка велосипеда<br>
+к сезону.<br></h2>
+<h3>2940р.</h3>
+<button style="margin-top: 10px;">ЗАКАЗАТЬ</button>
+  	</div>
+  	<div id="content11">
+<h1>Среднее техническое<br> обслуживание</h1><br>
+<h2>Бесплатный выезд.<br>
+Ремонт велосипеда с<br>
+заменой запчастей.<br></h2>
+<h3>4440р.</h3>
+<button style="margin-top: 10px;">ЗАКАЗАТЬ</button>
+  	</div>
+  	<div id="content11">
+<h1>Полное техническое<br> обслуживание</h1><br>
+<h2>Бесплатный выезд.<br>
+Переборка велосипеда<br>
+с заменой запчастей.<br></h2>
+<h3>6940р.</h3>
+<button style="margin-top: 10px;">ЗАКАЗАТЬ</button>
+  	</div>
+  	<div id="content11">
+<h1>Выезд мобильной <br>мастерской</h1><br>
+<h2>Диагностика и консультация<br>
+мастера. Выезд<br>
+по Вашему адресу<br></h2>
+<h3>790р.</h3>
+<button style="margin-top: 10px;"><a href="pages/index1.html">ЗАКАЗАТЬ</button></a>
+  	</div>
+  </div>
+ 
+  <div id="komyyslygi">
+  	<div style="height: 100px;background-color: black;width: 100%;margin-top: 10px;">
+  		<div id="text-yslygi"> Мы обслуживаем:</div>
+  	</div>
+  </div>
+  <div id="komyyslygibackground">
+  	<div id="content12"><img src="img/дом.png" width="70%"><br>
+  	Физических лиц.<br>
+Выезжаем на дом.
+</div>
+  	<div id="content12"><img src="img/офис.png" width="70%"><br>Компании.<br>
+  	 Приедем к Вам в офис.
+  	</div>
+  	<div id="content12"><img src="img/коттедж.png" width="70%"><br>Коттеджные посёлки.<br>
+Приезжаем на дачу.
+</div>
+  	<div id="content12"><img src="img/велосипедист.png" width="75%"><br>Участие<br> в
+мероприятиях города.
+</div>
+</div>
+<div id="questions">Часто задаваемые вопросы по ремонту велосипедов:</div>
+<div id="questions1"><center>
+<h1>Вы работаете зимой?</h1>
+Да, Вы можете вызвать в любое время года.<br>
+<br>
+<h1>Вы приезжаете на дом?</h1>
+Да, мы выезжаем на территорию заказчика в Москве и Московской области.<br> Это может быть квартирный дом, офисное здание, коттеджный посёлок или дачный участок.<br> Также обслуживаем велосипеды городских/частных прокатов и курьерские службы.<br>
+<br>
+<h1>Вы забираете велосипед в мастерскую?</h1>
+Нет, это оборудованные мастерские внутри фургонов.<br> Мобильность нашего сервиса – конкурентное преимущество.<br> Мастер приезжает к Вам со всем необходимым инструментом, запчастями и аксессуарами и оказывает услуги при Вас.<br> Через час-два Вы катаетесь на полностью исправном, готовом к сезону велосипеде.<br>
+<br>
+<h1>Как понять какое ТО мне необходимо?</h1>
+У нас есть три предложения по ТО велосипедов.<br> Если в Вашем велосипеде всё исправно, колёса не проколоты и он просто долго хранился без использования,<br> мы проведём с ним базовое ТО – подготовку к сезону.<br> Если у Вас были сломаны или вышли из строя детали велосипеда, <br>есть большие восьмёрки на колёсах или не работают гидравлические тормоза - скорее всего, Вам необходимо Среднее ТО.<br> Хотите полностью перебрать велосипед и обновить смазку во всех узлах - Полное ТО.<br>
+</center>
+</div>
+<div id="map-text">Мы на карте:</div>
+<div id="map">
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afbaa10c1284d9f8c39acece89667bd39dae7f75b14ebf7dcb0192783f4ca4743&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+  	<div id="footer"><center>Подписывайтесь на наши социальные сети, чтобы узнавать все первыми:</center>
+  	 <center><a href="vk"><img src="img/vk.png" ></a> <a href="twitter"><img src="img/twitter.png"></a><a href="instagram"><img src="img/instagram.png"></a><a href="youtube"><img src="img/youtube.png"></a></center>
+  	 <div id="footer-text"> <center>Сайт создал - Щербаков Роман Эдуардович<br>
+  	 10.06.2020, все права защищены©</center></div></div>
+
+	</body>
+	</html>
